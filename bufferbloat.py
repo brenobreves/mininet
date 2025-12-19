@@ -184,7 +184,8 @@ def bufferbloat():
     print(f"Media: {avg}")
 
     dev = sum((rtt - avg)**2 for rtt in lista_rtts) / len(lista_rtts)
-    print(f"Desvio padrao: {dev}")
+    devp = math.sqrt(dev)
+    print(f"Desvio padrao: {devp}")
 
     # TODO: compute average (and standard deviation) of the fetch
     # times.  You don't need to plot them.  Just note it in your
